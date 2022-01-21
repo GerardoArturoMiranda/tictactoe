@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import { faCat } from '@fortawesome/free-solid-svg-icons';
 import { faDog } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-tictactoe',
@@ -12,6 +13,7 @@ export class TictactoeComponent implements OnInit {
   faPaw = faPaw;
   faCat = faCat;
   faDog = faDog;
+  faAddressCard = faAddressCard;
   gatoGana = false;
   perroGana = false;
   nadieGana = false;
@@ -20,7 +22,7 @@ export class TictactoeComponent implements OnInit {
   turnoNuestro = true;
   boton =  [[false, false, false],[false, false, false],[false, false, false]];
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -49,7 +51,7 @@ export class TictactoeComponent implements OnInit {
         }
       }
     }
-  
+
     for (let i = 0; i < 3; i++) {
       if (this.revisarLinea(this.tablero[0][i], this.tablero[1][i], this.tablero[2][i])) {
         ganador = this.tablero[0][i];
@@ -67,7 +69,7 @@ export class TictactoeComponent implements OnInit {
         }
       }
     }
-  
+
     if (this.revisarLinea(this.tablero[0][0], this.tablero[1][1], this.tablero[2][2])) {
       ganador = this.tablero[0][0];
       console.log("Hubo un Ganador");
@@ -98,7 +100,7 @@ export class TictactoeComponent implements OnInit {
         this.perroGana = true;
       }
     }
-  
+
     let openSpots = 0;
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
@@ -121,20 +123,20 @@ export class TictactoeComponent implements OnInit {
         ganador = this.tablero[i][0];
       }
     }
-  
+
     for (let i = 0; i < 3; i++) {
       if (this.revisarLinea(this.tablero[0][i], this.tablero[1][i], this.tablero[2][i])) {
         ganador = this.tablero[0][i];
       }
     }
-  
+
     if (this.revisarLinea(this.tablero[0][0], this.tablero[1][1], this.tablero[2][2])) {
       ganador = this.tablero[0][0];
     }
     if (this.revisarLinea(this.tablero[2][0], this.tablero[1][1], this.tablero[0][2])) {
       ganador = this.tablero[2][0];
     }
-  
+
     let openSpots = 0;
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
@@ -143,7 +145,7 @@ export class TictactoeComponent implements OnInit {
         }
       }
     }
-  
+
     if (ganador == null && openSpots == 0) {
       return 'tie';
     } else {
@@ -205,7 +207,7 @@ minimax(this: any, tablero: any, depth: number , isMaximizing: boolean) {
       return -5;
     }else if(result == 'tie'){
       return 0;
-    } 
+    }
   }
 
   if (isMaximizing) {
