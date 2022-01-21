@@ -4,55 +4,58 @@
 <h1 class="display-10 text-center">Arturo Miranda</h1>
 <br>
 <div class="container  text-center border border-dark">
-  <div class="row">
-    <div class="col" >
-      <button type="button" id='boton00' class="btn btn-dark mb-2 mt-2" [disabled]="boton[0][0]"  (click)="realizarMovimiento(0,0)"><fa-icon id="tup" [icon]="faPaw" ></fa-icon></button>
+    <div class="row">
+        <div class="col">
+            <button type="button" id='boton00' class="btn btn-dark mb-2 mt-2" [disabled]="boton[0][0]" (click)="realizarMovimiento(0,0)"><fa-icon id="tup" [icon]="faAmbulance" ></fa-icon></button>
+        </div>
+        <div class="col">
+            <button type="button" id='boton01' class="btn btn-dark mb-2 mt-2" [disabled]="boton[0][1]" (click)="realizarMovimiento(0,1)"><fa-icon id="tup" [icon]="faAmbulance"></fa-icon></button>
+        </div>
+        <div class="col">
+            <button type="button" id='boton02' class="btn btn-dark mb-2 mt-2" [disabled]="boton[0][2]" (click)="realizarMovimiento(0,2)"><fa-icon id="tup" [icon]="faAmbulance"></fa-icon></button>
+        </div>
     </div>
-    <div class="col">
-      <button type="button" id='boton01' class="btn btn-dark mb-2 mt-2" [disabled]="boton[0][1]" (click)="realizarMovimiento(0,1)"><fa-icon id="tup" [icon]="faPaw"></fa-icon></button>
+    <div class="row">
+        <div class="col">
+            <button type="button" id='boton10' class="btn btn-dark mb-2" [disabled]="boton[1][0]" (click)="realizarMovimiento(1,0)"><fa-icon id="tup" [icon]="faAmbulance"></fa-icon></button>
+        </div>
+        <div class="col">
+            <button type="button" id='boton11' class="btn btn-dark mb-2" [disabled]="boton[1][1]" (click)="realizarMovimiento(1,1)"><fa-icon id="tup" [icon]="faAmbulance"></fa-icon></button>
+        </div>
+        <div class="col">
+            <button type="button" id='boton12' class="btn btn-dark mb-2" [disabled]="boton[1][2]" (click)="realizarMovimiento(1,2)"><fa-icon id="tup" [icon]="faAmbulance"></fa-icon></button>
+        </div>
     </div>
-    <div class="col">
-      <button type="button" id='boton02' class="btn btn-dark mb-2 mt-2" [disabled]="boton[0][2]" (click)="realizarMovimiento(0,2)"><fa-icon id="tup" [icon]="faPaw"></fa-icon></button>
+    <div class="row">
+        <div class="col">
+            <button type="button" id='boton20' class="btn btn-dark mb-2 mt-2" [disabled]="boton[2][0]" (click)="realizarMovimiento(2,0)"><fa-icon id="tup" [icon]="faAmbulance"></fa-icon></button>
+        </div>
+        <div class="col">
+            <button type="button" id='boton21' class="btn btn-dark mb-2 mt-2" [disabled]="boton[2][1]" (click)="realizarMovimiento(2,1)"><fa-icon id="tup" [icon]="faAmbulance"></fa-icon></button>
+        </div>
+        <div class="col">
+            <button type="button" id='boton22' class="btn btn-dark mb-2 mt-2" [disabled]="boton[2][2]" (click)="realizarMovimiento(2,2)"><fa-icon id="tup" [icon]="faAmbulance"></fa-icon></button>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <button type="button" id='boton10' class="btn btn-dark mb-2" [disabled]="boton[1][0]" (click)="realizarMovimiento(1,0)"><fa-icon id="tup" [icon]="faPaw"></fa-icon></button>
-    </div>
-    <div class="col">
-      <button type="button" id='boton11' class="btn btn-dark mb-2" [disabled]="boton[1][1]" (click)="realizarMovimiento(1,1)"><fa-icon id="tup" [icon]="faPaw"></fa-icon></button>
-    </div>
-    <div class="col">
-      <button type="button" id='boton12' class="btn btn-dark mb-2" [disabled]="boton[1][2]" (click)="realizarMovimiento(1,2)"><fa-icon id="tup" [icon]="faPaw"></fa-icon></button>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <button type="button" id='boton20' class="btn btn-dark mb-2 mt-2" [disabled]="boton[2][0]" (click)="realizarMovimiento(2,0)"><fa-icon id="tup" [icon]="faPaw"></fa-icon></button>
-    </div>
-    <div class="col">
-      <button type="button"  id='boton21' class="btn btn-dark mb-2 mt-2" [disabled]="boton[2][1]" (click)="realizarMovimiento(2,1)"><fa-icon id="tup" [icon]="faPaw"></fa-icon></button>
-    </div>
-    <div class="col">
-      <button type="button" id='boton22' class="btn btn-dark mb-2 mt-2" [disabled]="boton[2][2]" (click)="realizarMovimiento(2,2)"><fa-icon id="tup" [icon]="faPaw"></fa-icon></button>
-    </div>
-  </div>
 </div>
 <br>
 <div class="align-items-center text-center" *ngIf="gatoGana">
-<fa-icon [icon]="faCat" class="cat"></fa-icon><h2 class="text-center">Gana el Gato ¡Miaw!</h2>
-<button  type="button" class="btn btn-warning mb-2" (click)="restaurar()" >Gracias por jugar, jugar de nuevo.<fa-icon [icon]="faPaw"></fa-icon></button>
+    <fa-icon [icon]="faCat" class="cat"></fa-icon>
+    <h2 class="text-center">Gana el Gato ¡Miaw!</h2>
+    <button type="button" class="btn btn-warning mb-2" (click)="restaurar()">Gracias por jugar, jugar de nuevo.<fa-icon [icon]="faAmbulance"></fa-icon></button>
 </div>
 <br>
 <div class="align-items-center text-center" *ngIf="perroGana">
-  <fa-icon [icon]="faDog" class="cat"></fa-icon><h2 class="text-center">Gana el Perro ¡Woof!</h2>
-  <button type="button" class="btn btn-warning mb-2" (click)="restaurar()">Gracias por jugar, jugar de nuevo.<fa-icon [icon]="faPaw"></fa-icon></button>
-  </div>
-  <br>
-  <div class="align-items-center text-center" *ngIf="nadieGana">
+    <fa-icon [icon]="faDog" class="cat"></fa-icon>
+    <h2 class="text-center">Gana el Perro ¡Woof!</h2>
+    <button type="button" class="btn btn-warning mb-2" (click)="restaurar()">Gracias por jugar, jugar de nuevo.<fa-icon [icon]="faAmbulance"></fa-icon></button>
+</div>
+<br>
+<div class="align-items-center text-center" *ngIf="nadieGana">
     <fa-icon [icon]="faCat" class="cat"></fa-icon>
-    <fa-icon [icon]="faDog" class="cat"></fa-icon><h2 class="text-center">Nadie Gana ¡Woof!</h2>
-    <button type="button" class="btn btn-warning mb-2" (click)="restaurar()">Gracias por jugar, jugar de nuevo.<fa-icon [icon]="faPaw"></fa-icon></button>
-    </div>
-    <br>
+    <fa-icon [icon]="faDog" class="cat"></fa-icon>
+    <h2 class="text-center">Nadie Gana ¡Woof!</h2>
+    <button type="button" class="btn btn-warning mb-2" (click)="restaurar()">Gracias por jugar, jugar de nuevo.<fa-icon [icon]="faAmbulance"></fa-icon></button>
+</div>
+<br>
 <h1 class="display-10 text-center">Minimum Viable Products , Laboratorio de desarrollo de aplicaciones Web, Oct 2021</h1>
