@@ -1,17 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
+
 import { faCat } from '@fortawesome/free-solid-svg-icons';
+
 import { faDog } from '@fortawesome/free-solid-svg-icons';
 
+import { faAd } from '@fortawesome/free-solid-svg-icons';
+
+
+
+
 @Component({
-  selector: 'app-tictactoe',
-  templateUrl: './tictactoe.component.html',
-  styleUrls: ['./tictactoe.component.css']
+
+selector: 'app-tictactoe',
+
+templateUrl: './tictactoe.component.html',
+
+styleUrls: ['./tictactoe.component.css']
+
 })
+
 export class TictactoeComponent implements OnInit {
-  faPaw = faPaw;
-  faCat = faCat;
-  faDog = faDog;
+
+faPaw = faPaw;
+
+faCat = faCat;
+
+faDog = faDog;
+  faAccusoft = faAd;
   gatoGana = false;
   perroGana = false;
   nadieGana = false;
