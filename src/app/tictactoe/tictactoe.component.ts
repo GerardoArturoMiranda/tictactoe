@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import { faCat } from '@fortawesome/free-solid-svg-icons';
 import { faDog } from '@fortawesome/free-solid-svg-icons';
+import { faBaby } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-tictactoe',
@@ -12,6 +13,7 @@ export class TictactoeComponent implements OnInit {
   faPaw = faPaw;
   faCat = faCat;
   faDog = faDog;
+  faBaby = faBaby;
   gatoGana = false;
   perroGana = false;
   nadieGana = false;
